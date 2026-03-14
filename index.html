@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Barbearia Prime</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:#020617;
+padding:15px 0;
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:40px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(180deg,#020617,#0f172a);
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#cbd5e1;
+margin-bottom:25px;
+}
+
+.botao{
+background:#22c55e;
+padding:15px 30px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:40px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+width:230px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+margin-top:40px;
+}
+
+.galeria img{
+width:100%;
+border-radius:8px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#22c55e;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+footer{
+padding:30px;
+text-align:center;
+color:#94a3b8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#galeria">Galeria</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="inicio">
+
+<h1>Barbearia Prime</h1>
+<p>Corte moderno e barba com estilo</p>
+
+<a class="botao" href="https://wa.me/5599999999999">
+Agendar horário
+</a>
+
+</section>
+
+<section class="section" id="servicos">
+
+<h2>Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Corte</h3>
+<p>Cortes clássicos e modernos.</p>
+</div>
+
+<div class="card">
+<h3>Barba</h3>
+<p>Modelagem profissional.</p>
+</div>
+
+<div class="card">
+<h3>Combo</h3>
+<p>Corte + barba com desconto.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="galeria">
+
+<h2>Galeria</h2>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033">
+<img src="https://images.unsplash.com/photo-1593702275687-f8b9c6c9f5c0">
+<img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70">
+
+</div>
+
+</section>
+
+<section class="section" id="contato">
+
+<h2>Agende seu horário</h2>
+
+<p>Entre em contato pelo WhatsApp</p>
+
+<a class="botao" href="https://wa.me/5599999999999">
+Falar agora
+</a>
+
+</section>
+
+<footer>
+
+<p>Barbearia Prime</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5599999999999">
+WhatsApp
+</a>
+
+</body>
+  </html>
