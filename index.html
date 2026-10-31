@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17100b">
+<meta name="description" content="Barbearia Teste: tradição, técnica e personalidade em uma experiência clássica de barbearia.">
+<meta property="og:title" content="Barbearia Teste | O ritual do bom corte">
+<meta property="og:description" content="Cortes precisos, cuidado e uma atmosfera clássica de madeira, couro e latão.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85">
+<title>Barbearia Teste | O ritual do bom corte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#17100b;--panel:#21150f;--wood:#3b2418;--wood2:#573722;--gold:#bd9256;--gold2:#e1c18a;--paper:#f0e6d4;--muted:#ad9b82;--line:rgba(225,193,138,.2);--max:1160px;--shadow:0 25px 70px #0006}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;min-width:320px;background:var(--bg);color:var(--paper);font-family:"DM Sans",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.2;background:repeating-linear-gradient(93deg,transparent 0 50px,#b17a4220 51px,transparent 54px),repeating-linear-gradient(0deg,transparent 0 8px,#ffffff08 9px,transparent 10px)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+::selection{background:var(--gold);color:#1c120b}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.skip{position:fixed;top:8px;left:8px;z-index:999;padding:10px 14px;background:var(--paper);color:var(--bg);transform:translateY(-150%)}
+.skip:focus{transform:none}
+.section{padding:92px 0}
+.eyebrow{color:var(--gold2);font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.eyebrow:before{content:"";display:inline-block;width:27px;height:1px;margin:0 10px 4px 0;background:var(--gold)}
+.heading{max-width:680px;margin-bottom:38px}
+.heading h2{margin:12px 0;font:600 clamp(2.3rem,5vw,4rem)/1.05 "Playfair Display",Georgia,serif;letter-spacing:-.035em}
+.heading p{max-width:590px;margin:0;color:var(--muted);font-size:.9rem}
+.gold{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 19px;border:1px solid var(--gold);border-radius:3px;background:var(--gold);color:#21150d;font-size:.78rem;font-weight:700;letter-spacing:.04em;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:var(--gold2);border-color:var(--gold2)}
+.btn.alt{background:transparent;color:var(--paper);border-color:#eee4d455}
+.btn.alt:hover{color:var(--gold2);border-color:var(--gold)}
+
+/* Navegação */
+.demo{padding:7px 12px;background:#2a1a11;color:#d8c39f;text-align:center;font-size:.65rem;letter-spacing:.08em}
+.demo b{color:var(--gold2)}
+header{position:sticky;top:0;z-index:50;background:#17100beF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.mark{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold2);font:600 1rem "Playfair Display";transform:rotate(45deg)}
+.mark span{transform:rotate(-45deg)}
+.brand strong{display:block;font:600 .98rem "Playfair Display";letter-spacing:.1em}
+.brand small{display:block;color:var(--muted);font-size:.55rem;letter-spacing:.22em;text-transform:uppercase}
+.links{display:flex;align-items:center;gap:clamp(12px,2vw,26px);font-size:.76rem;color:#d1c1a8}
+.links a:not(.btn):hover{color:var(--gold2)}
+.navbtn{min-height:40px;padding:8px 13px}
+.toggle{display:none;width:42px;height:40px;border:1px solid var(--line);background:none;color:var(--paper);font-size:1.2rem}
+
+/* Abertura */
+.hero{min-height:690px;position:relative;display:flex;align-items:center;isolation:isolate;overflow:hidden;background:#130c08}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=88") center/cover}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#130c08f5 0%,#130c08d9 42%,#130c0870 75%,#130c0890),linear-gradient(0deg,var(--bg),transparent 24%)}
+.hero-copy{max-width:740px;padding:105px 0 120px}
+.kicker{color:var(--gold2);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
+.kicker:before{content:"";display:inline-block;width:35px;height:1px;background:var(--gold);margin:0 10px 4px 0}
+.hero h1{margin:22px 0;font:600 clamp(3.6rem,8.5vw,7rem)/.94 "Playfair Display",Georgia,serif;letter-spacing:-.05em}
+.hero h1 em{display:block;color:var(--gold2);font-weight:500}
+.hero p{max-width:525px;color:#d8cbb7;font-size:1rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-points{display:flex;flex-wrap:wrap;gap:22px;margin-top:48px;color:#cbb99f;font-size:.72rem}
+.hero-points b{color:var(--gold2);margin-right:7px}
+.stamp{position:absolute;right:max(5%,calc((100vw - var(--max))/2));bottom:65px;width:112px;height:112px;display:grid;place-items:center;border:1px solid #e1c18a99;border-radius:50%;box-shadow:0 0 0 7px #e1c18a12,inset 0 0 0 5px #e1c18a12;color:var(--gold2);text-align:center;transform:rotate(-10deg);background:#1b110a66}
+.stamp strong{display:block;font:600 1.35rem "Playfair Display"}
+.stamp small,.stamp span{display:block;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase}
+
+/* Faixa */
+.band{border-block:1px solid var(--line);background:#241810}
+.band-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.band article{display:flex;align-items:center;gap:15px;min-height:105px;padding:18px 25px;border-right:1px solid var(--line)}
+.band article:first-child{padding-left:0}
+.band article:last-child{border:0}
+.symbol{width:42px;height:42px;display:grid;place-items:center;border:1px solid #bd925677;color:var(--gold2);font-size:1.1rem}
+.band strong{display:block;font:600 1rem "Playfair Display"}
+.band small{display:block;color:var(--muted);font-size:.7rem}
+
+/* Serviços */
+.services{background:linear-gradient(#1c120c,#17100b)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.service{position:relative;min-height:245px;padding:25px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(145deg,#593b2855,#21150feF 68%);transition:.25s}
+.service:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;background:repeating-linear-gradient(3deg,transparent 0 24px,#d4a16b16 25px,transparent 27px)}
+.service:hover{transform:translateY(-5px);border-color:#bd925699;box-shadow:var(--shadow)}
+.service>*{position:relative;z-index:1}
+.service-head{display:flex;justify-content:space-between;align-items:center}
+.service-icon{width:44px;height:44px;display:grid;place-items:center;border:1px solid #bd925677;color:var(--gold2);font-size:1.1rem}
+.service-no{color:#e1c18a88;font:500 1.2rem "Playfair Display"}
+.service h3{margin:22px 0 7px;font:600 1.45rem "Playfair Display"}
+.service p{min-height:45px;margin:0;color:var(--muted);font-size:.8rem}
+.service-foot{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-top:19px;padding-top:13px;border-top:1px solid var(--line)}
+.price{color:var(--gold2);font:600 1.15rem "Playfair Display"}
+.duration{color:var(--muted);font-size:.7rem}
+.note{color:#837664;font-size:.68rem;margin-top:15px}
+
+/* História */
+.story{background:#e9deca;color:#2a1c14}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:65px}
+.photo-frame{position:relative;padding:0 18px 18px 0}
+.photo-frame:after{content:"";position:absolute;right:0;bottom:0;width:78%;height:78%;border:1px solid #9b744c}
+.story-photo{position:relative;height:480px;background:url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:0 20px 50px #3b251522}
+.photo-caption{position:absolute;left:22px;bottom:19px;color:#fff0dc;font:italic 1.1rem "Playfair Display";z-index:1}
+.story .eyebrow{color:#8c6239}
+.story .eyebrow:before{background:#8c6239}
+.story h2{margin:13px 0 17px;font:600 clamp(2.4rem,4.5vw,3.8rem)/1.05 "Playfair Display";letter-spacing:-.04em}
+.story p{color:#695744;font-size:.88rem}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:17px 22px;margin-top:26px}
+.value{padding-top:11px;border-top:1px solid #62462b33}
+.value b{display:block;font:600 1.08rem "Playfair Display"}
+.value small{color:#786854;font-size:.72rem}
+
+/* Etapas e equipe */
+.ritual{background:#21160f}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}
+.step{min-height:190px;padding:23px;border-right:1px solid var(--line)}
+.step:last-child{border:0}
+.step-no{color:var(--gold);font:500 2rem "Playfair Display"}
+.step h3{margin:15px 0 6px;font:600 1.2rem "Playfair Display"}
+.step p{margin:0;color:var(--muted);font-size:.75rem}
+.team{background:#18110c}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:850px}
+.person{display:grid;grid-template-columns:.85fr 1fr;min-height:250px;border:1px solid var(--line);background:#23170f}
+.person-photo{min-height:250px;background-size:cover;background-position:center;filter:saturate(.72)}
+.person-photo.one{background-image:url("https://images.unsplash.com/photo-1582893561942-d61adcb2e534?auto=format&fit=crop&w=600&q=85")}
+.person-photo.two{background-image:url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=85")}
+.person-info{align-self:center;padding:18px}
+.person-info small{color:var(--gold);font-size:.61rem;letter-spacing:.12em;text-transform:uppercase}
+.person-info h3{margin:8px 0;font:600 1.25rem "Playfair Display"}
+.person-info p{margin:0;color:var(--muted);font-size:.73rem}
+.disclaimer{margin-top:14px;color:#887762;font-size:.66rem}
+
+/* Galeria */
+.gallery{background:#241810}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:-10px 0 24px}
+.filter{padding:8px 13px;border:1px solid var(--line);background:none;color:var(--muted);font-size:.7rem}
+.filter.active,.filter:hover{border-color:var(--gold);color:var(--gold2);background:#bd925611}
+.gallery-grid{display:grid;grid-template-columns:1.2fr .9fr .9fr;grid-template-rows:220px 220px;gap:12px}
+.gallery-item{position:relative;overflow:hidden;border:0;padding:0;background:#120c08;text-align:left;cursor:zoom-in}
+.gallery-item:first-child{grid-row:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;filter:saturate(.72);transition:.45s}
+.gallery-item:hover img{transform:scale(1.06);filter:saturate(1)}
+.gallery-item:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#100a08dc)}
+.gallery-item span{position:absolute;z-index:1;bottom:13px;left:15px;color:#f5e8d5;font:500 1rem "Playfair Display"}
+.gallery-item[hidden]{display:none}
+
+/* Depoimentos */
+.reviews{background:#17100b}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.review{padding:23px;border:1px solid var(--line);background:linear-gradient(135deg,#50331e55,#1e140e)}
+.stars{color:var(--gold2);letter-spacing:.13em}
+.review blockquote{margin:15px 0 18px;color:#d9cbb7;font:italic 1rem/1.55 "Playfair Display"}
+.review small{color:var(--muted);font-size:.7rem}
+
+/* Agendamento */
+.booking{background:linear-gradient(110deg,#180e09f5,#21130df2),url("https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1600&q=80") center/cover}
+.booking-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}
+.booking-intro h2{margin:13px 0 16px;font:600 clamp(2.5rem,4.6vw,4rem)/1.03 "Playfair Display"}
+.booking-intro p{color:var(--muted);font-size:.87rem}
+.points{display:grid;gap:10px;margin-top:25px;color:#d3c3a9;font-size:.75rem}
+.points b{color:var(--gold2);margin-right:8px}
+.form-card{padding:clamp(19px,4vw,32px);border:1px solid #bd925655;background:#1b120df2;box-shadow:var(--shadow)}
+.form-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.form-head h3{margin:0;font:600 1.35rem "Playfair Display"}
+.demo-pill{border:1px solid #bd925666;padding:4px 8px;color:var(--gold2);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{color:#d7c7ae;font-size:.7rem;font-weight:600}
+.field input,.field select,.field textarea{width:100%;min-height:44px;padding:10px 11px;border:1px solid #bd925633;border-radius:2px;background:#120c08;color:var(--paper);font-size:.78rem}
+.field textarea{min-height:78px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:1px solid var(--gold);border-color:var(--gold)}
+.estimate{display:flex;justify-content:space-between;gap:12px;margin-top:17px;padding:12px 0;border-block:1px solid var(--line);color:var(--muted);font-size:.72rem}
+.estimate strong{color:var(--gold2);font:600 1.1rem "Playfair Display"}
+.form-card .btn{width:100%;margin-top:17px}
+.legal{color:#837461;font-size:.64rem;margin:10px 0 0}
+
+/* FAQ e contato */
+.faq{background:#e9deca;color:#2a1c14}
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:55px}
+.faq .eyebrow{color:#8c6239}
+.faq .eyebrow:before{background:#8c6239}
+.faq h2{margin:13px 0;font:600 clamp(2.4rem,4.2vw,3.6rem)/1.04 "Playfair Display"}
+.faq-copy{color:#6b5946;font-size:.86rem}
+.faq-list{border-top:1px solid #5f402b33}
+.faq-list details{border-bottom:1px solid #5f402b33}
+.faq-list summary{position:relative;padding:17px 30px 17px 0;list-style:none;cursor:pointer;font:600 1rem "Playfair Display"}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"+";position:absolute;right:0;color:#966d43;font:1.4rem "DM Sans"}
+.faq-list details[open] summary:after{content:"−"}
+.faq-list details p{margin:0 0 16px;color:#715e4b;font-size:.8rem}
+.contact{padding:72px 0;background:#21160f}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:15px}
+.contact-card{padding:22px;border:1px solid var(--line);background:#54351d22}
+.contact-card small{color:var(--gold);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+.contact-card h3{margin:8px 0;font:600 1.2rem "Playfair Display"}
+.contact-card p{margin:0;color:var(--muted);font-size:.74rem}
+.contact-card a{display:inline-block;margin-top:11px;color:var(--gold2);font-size:.72rem;border-bottom:1px solid var(--gold)}
+
+/* Rodapé, modais e painel */
+footer{padding:35px 0 20px;border-top:1px solid var(--line);background:#120c08}
+.foot-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:25px}
+.foot-top p{max-width:350px;color:var(--muted);font-size:.72rem}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 20px;color:#b8a58b;font-size:.7rem}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid var(--line);color:#86745f;font-size:.65rem}
+.foot-bottom button{border:0;background:none;color:var(--gold2);text-decoration:underline;cursor:pointer;font-size:inherit}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:40;width:54px;height:54px;display:grid;place-items:center;border-radius:50%;border:1px solid #ffffff33;background:#557b52;color:white;font-size:1.3rem;box-shadow:0 8px 25px #0007}
+.mobile-cta{display:none}
+.progress{position:fixed;top:0;left:0;z-index:90;width:0;height:2px;background:var(--gold2)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:16px;background:#000c;backdrop-filter:blur(6px)}
+.modal.open{display:grid}
+.modal-box{width:min(760px,100%);max-height:90vh;overflow:auto;padding:23px;border:1px solid #bd925666;background:#21160f;box-shadow:var(--shadow)}
+.modal-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.modal-head h2{margin:0;font:600 1.4rem "Playfair Display"}
+.close{width:35px;height:35px;border:1px solid var(--line);background:none;color:var(--paper);font-size:1.1rem}
+.modal-note{color:var(--muted);font-size:.78rem}
+.confirm{padding:18px;border:1px solid var(--line);background:#bd925610}
+.confirm h3{margin:0 0 7px;color:var(--gold2);font:600 1.3rem "Playfair Display"}
+.confirm p{margin:0;color:#d1c1a8;font-size:.8rem}
+.lightbox .modal-box{width:min(1000px,100%);padding:10px;background:#100a07}
+.lightbox img{width:100%;max-height:75vh;object-fit:contain}
+.light-caption{padding:7px;color:var(--paper-dim);font:italic 1rem "Playfair Display"}
+.warning{padding:11px 13px;border-left:3px solid var(--gold);background:#bd925611;color:#d9c7aa;font-size:.73rem}
+.tabs{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0}
+.tabs button,.admin-actions button{padding:8px 11px;border:1px solid var(--line);background:none;color:var(--muted);font-size:.7rem}
+.tabs button.active{border-color:var(--gold);color:var(--gold2)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{padding:15px;border:1px solid var(--line);background:#160e09}
+.stat small{color:var(--muted);font-size:.65rem}
+.stat strong{display:block;margin-top:5px;color:var(--gold2);font:600 1.6rem "Playfair Display"}
+.table-wrap{overflow:auto}
+.admin-table{width:100%;border-collapse:collapse;font-size:.7rem;white-space:nowrap}
+.admin-table th,.admin-table td{padding:10px;border-bottom:1px solid var(--line);text-align:left}
+.admin-table th{color:var(--gold);font-size:.62rem;text-transform:uppercase;letter-spacing:.08em}
+.admin-table button{border:1px solid var(--line);background:none;color:var(--paper);padding:5px 7px;font-size:.65rem}
+.admin-table .danger{color:#e49b8c}
+.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}
+.admin-form input{min-width:0;padding:9px;border:1px solid var(--line);background:#130c08;color:var(--paper);font-size:.75rem}
+.admin-form .full{grid-column:1/-1}
+.admin-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.admin-actions button:hover{border-color:var(--gold);color:var(--gold2)}
+.toast{position:fixed;right:18px;bottom:85px;z-index:150;max-width:320px;padding:12px 15px;border:1px solid var(--gold);background:#281a10;color:var(--paper);font-size:.75rem;opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s}
+.toast.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+.links{gap:12px}
+.links a:not(.btn){font-size:.68rem}
+.story-grid,.booking-grid,.faq-grid{gap:35px}
+.person{grid-template-columns:1fr}
+.person-photo{min-height:200px}
+.person-info{padding:15px}
+}
+@media(max-width:740px){
+.wrap{width:calc(100% - 34px)}
+.section{padding:72px 0}
+.nav{height:70px}
+.toggle{display:block}
+.links{position:absolute;top:70px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:14px 20px 20px;background:#17100b;border-bottom:1px solid var(--line)}
+.links.open{display:flex}
+.links a:not(.btn){padding:11px 0;border-bottom:1px solid #bd925622;font-size:.8rem}
+.links .btn{margin-top:12px}
+.navbtn{display:none}
+.hero{min-height:650px}
+.hero:after{background:line
